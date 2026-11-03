@@ -1,0 +1,25 @@
+{
+  "name": "ia_learn_app",
+  "version": "1.0.0",
+  "description": "Application d’apprentissage interactive pour suivre le parcours « Bien utiliser l’IA », annoter les modules et consigner ses questions.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "serve": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ia",
+    "apprentissage",
+    "llm",
+    "parcours",
+    "notes"
+  ],
+  "license": "MIT"
+}

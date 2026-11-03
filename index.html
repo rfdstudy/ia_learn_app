@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0f1b27">
+    <meta
+      name="description"
+      content="Parcours d’apprentissage interactif pour bien utiliser l’IA : 12 modules, des exercices, des notes, des questions et une bibliothèque de ressources."
+    >
+    <title>Parcours IA — Bien utiliser l’IA</title>
+
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="public/manifest.webmanifest">
+    <link rel="preload" href="public/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="public/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="src/styles/base.css">
+    <link rel="stylesheet" href="src/styles/layout.css">
+    <link rel="stylesheet" href="src/styles/components.css">
+    <link rel="stylesheet" href="src/styles/pages.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#view">Aller au contenu</a>
+
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Navigation principale">
+        <div class="sidebar-top">
+          <a class="brand" href="#/" aria-label="Parcours IA, vue d’ensemble">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path
+                  d="M16 2.5c.7 6.9 3.3 9.5 10.2 10.2-6.9.7-9.5 3.3-10.2 10.2-.7-6.9-3.3-9.5-10.2-10.2C12.7 12 15.3 9.4 16 2.5Z"
+                  fill="currentColor"></path>
+                <circle cx="24.5" cy="24.5" r="3.5" fill="currentColor" opacity=".55"></circle>
+              </svg>
+            </span>
+            <span class="brand-copy">
+              <strong>Parcours IA</strong>
+              <small>Bien utiliser l’IA</small>
+            </span>
+          </a>
+          <button
+            type="button"
+            class="icon-btn sidebar-close"
+            data-action="close-nav"
+            aria-label="Fermer le menu"
+          >
+            <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <path d="M18 6 6 18M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Parcours et outils">
+          <div id="quick-nav" class="quick-nav"></div>
+          <div id="sidebar-modules"></div>
+          <div id="sidebar-optional"></div>
+        </nav>
+
+        <div class="sidebar-footer" id="sidebar-progress"></div>
+      </aside>
+
+      <div class="sidebar-scrim" data-action="close-nav" aria-hidden="true"></div>
+
+      <div class="main-shell">
+        <header class="mobile-bar">
+          <button
+            type="button"
+            class="icon-btn menu-toggle"
+            id="menu-toggle"
+            data-action="toggle-nav"
+            aria-label="Ouvrir le menu"
+            aria-controls="sidebar"
+            aria-expanded="false"
+          >
+            <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+          <a class="mobile-brand" href="#/">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path
+                  d="M16 2.5c.7 6.9 3.3 9.5 10.2 10.2-6.9.7-9.5 3.3-10.2 10.2-.7-6.9-3.3-9.5-10.2-10.2C12.7 12 15.3 9.4 16 2.5Z"
+                  fill="currentColor"></path>
+                <circle cx="24.5" cy="24.5" r="3.5" fill="currentColor" opacity=".55"></circle>
+              </svg>
+            </span>
+            <strong>Parcours IA</strong>
+          </a>
+          <a class="icon-btn" href="#/questions" aria-label="Mes questions" title="Mes questions">
+            <svg class="icon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2Z"></path>
+            </svg>
+          </a>
+        </header>
+
+        <main id="view" tabindex="-1"></main>
+      </div>
+    </div>
+
+    <div id="modal-root"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <noscript>
+      <div class="noscript-card">
+        <strong>JavaScript est nécessaire.</strong>
+        <p>
+          Cette application enregistre vos notes et votre progression localement dans le navigateur.
+          Activez JavaScript pour l’utiliser.
+        </p>
+      </div>
+    </noscript>
+
+    <script src="src/data/resources.js"></script>
+    <script src="src/data/modules-core.js"></script>
+    <script src="src/data/modules-optional.js"></script>
+    <script src="src/core.js"></script>
+    <script src="src/store.js"></script>
+    <script src="src/ui.js"></script>
+    <script src="src/views.js"></script>
+    <script src="src/views-pages.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>

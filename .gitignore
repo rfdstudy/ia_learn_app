@@ -1,0 +1,26 @@
+# Dépendances
+node_modules/
+
+# Builds
+dist/
+coverage/
+
+# Environnement local
+.env
+.env.local
+.env.*.local
+
+# Journaux et caches
+*.log
+npm-debug.log*
+.npm/
+.cache/
+.tmp/
+
+# Systèmes et éditeurs
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
